@@ -8,11 +8,13 @@ echo BBB > %OUTFILE_INST%
 
 where find
 
-find /?
+set FIND_CMD=C:\Windows\System32\find.exe
 
-find A  %OUTFILE_EXE%
+%FIND_CMD% /?
 
-find "A"  %OUTFILE_EXE%
+%FIND_CMD% A  %OUTFILE_EXE%
+
+%FIND_CMD% "A"  %OUTFILE_EXE%
 
 dir /?
 
@@ -20,8 +22,8 @@ dir
 
 
 @echo start generate MD5 hash
-certutil -hashfile %OUTFILE_EXE% MD5  | find /v "MD5" | find /v "CertUtil" > %OUTFILE_EXE%.md5
-certutil -hashfile %OUTFILE_INST% MD5 | find /v "MD5" | find /v "CertUtil" > %OUTFILE_INST%.md5
+certutil -hashfile %OUTFILE_EXE% MD5  | %FIND_CMD% /v "MD5" | %FIND_CMD% /v "CertUtil" > %OUTFILE_EXE%.md5
+certutil -hashfile %OUTFILE_INST% MD5 | %FIND_CMD% /v "MD5" | %FIND_CMD% /v "CertUtil" > %OUTFILE_INST%.md5
 @echo end generate MD5 hash
 
 
