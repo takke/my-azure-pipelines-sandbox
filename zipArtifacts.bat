@@ -8,6 +8,12 @@ echo BBB > %OUTFILE_INST%
 
 find /?
 
+find A  %OUTFILE_EXE%
+
+dir /?
+
+dir
+
 
 @echo start generate MD5 hash
 certutil -hashfile %OUTFILE_EXE% MD5  | find /v "MD5" | find /v "CertUtil" > %OUTFILE_EXE%.md5
