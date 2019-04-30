@@ -9,6 +9,6 @@ trigger:
 pool:
   vmImage: 'VS2017-Win2016'
 
-jobs:
+steps:
   - script: zipArtifacts.bat
     displayName: Zip files for artifacts
