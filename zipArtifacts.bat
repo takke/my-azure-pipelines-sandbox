@@ -10,6 +10,8 @@ find /?
 
 find A  %OUTFILE_EXE%
 
+find "A"  %OUTFILE_EXE%
+
 dir /?
 
 dir
