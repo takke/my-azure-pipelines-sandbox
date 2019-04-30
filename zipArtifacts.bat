@@ -6,6 +6,8 @@ set OUTFILE_EXE=hoge-Exe.zip
 echo AAA > %OUTFILE_EXE%
 echo BBB > %OUTFILE_INST%
 
+where find
+
 find /?
 
 find A  %OUTFILE_EXE%
