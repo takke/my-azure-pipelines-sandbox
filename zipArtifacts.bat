@@ -6,6 +6,8 @@ set OUTFILE_EXE=hoge-Exe.zip
 echo AAA > %OUTFILE_EXE%
 echo BBB > %OUTFILE_INST%
 
+find /?
+
 
 @echo start generate MD5 hash
 certutil -hashfile %OUTFILE_EXE% MD5  | find /v "MD5" | find /v "CertUtil" > %OUTFILE_EXE%.md5
